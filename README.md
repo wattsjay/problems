@@ -7,3 +7,4 @@ A selection of LeetCode problems implemented in TypeScript using the [NeetCode R
 ### Array
 
 - 🟢 Contains Duplicate
+- 🟢 Valid Anagram
