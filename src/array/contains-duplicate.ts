@@ -30,8 +30,21 @@ const EXAMPLES = [
  * Hash Set
  * Time O(n) | Space O(n)
  */
-function containsDuplicateHashSet(nums: number[]) {
+function containsDuplicateHashSetSmallInputSize(nums: number[]) {
   return new Set(nums).size !== nums.length;
+}
+
+/**
+ * Hash Set
+ * Time O(n) | Space O(n)
+ */
+function containsDuplicateHashSetLargeInputSize(nums: number[]) {
+  let set = new Set();
+  for (let x of nums) {
+    if (set.has(x)) return true;
+    set.add(x);
+  }
+  return false;
 }
 
 /**
@@ -59,7 +72,9 @@ if (import.meta.vitest) {
   const { it, expect } = import.meta.vitest;
   it('Hash Set', () => {
     EXAMPLES.forEach((example) => {
-      expect(containsDuplicateHashSet(example.input)).toEqual(example.output);
+      expect(containsDuplicateHashSetSmallInputSize(example.input)).toEqual(
+        example.output,
+      );
     });
   });
   it('Heap Sort', () => {
