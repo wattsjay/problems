@@ -2,7 +2,7 @@
 
 A selection of LeetCode problems implemented in TypeScript using the [NeetCode Roadmap](https://neetcode.io/roadmap).
 
-## Array
+## A — Array
 
 ### 1. 🟢 🙂 [Contains Duplicate](./src/array/contains-duplicate.ts)
 
@@ -52,3 +52,14 @@ A selection of LeetCode problems implemented in TypeScript using the [NeetCode R
   2. Iterate over all numbers.
   3. Get sequence start. By testing if previous number is not in set.
   4. Save sequence length.
+
+## B — Stack
+
+### 1. 🟢 🙂 [Valid Parentheses](./src/stack/valid-parentheses.ts)
+
+- **DS**: Stack
+- **Algorithm**:
+  1. ITERATE brackets.
+  2. IF IS open THEN push.
+  3. ELSE IF pop IS NOT matching bracket THEN false.
+  4. ELSE return test IF stack IS empty.
