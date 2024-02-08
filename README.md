@@ -48,10 +48,11 @@ A selection of LeetCode problems implemented in TypeScript using the [NeetCode R
 
 - **DS**: Set
 - **Algorithm**:
-  1. Get unique numbers.
-  2. Iterate over all numbers.
-  3. Get sequence start. By testing if previous number is not in set.
-  4. Save sequence length.
+  1. CREATE numbers Set.
+  2. ITERATE numbers.
+  3. GET sequence start. IF previous number IS NOT IN Set.
+  4. SET sequence length IF longer THAN existing.
+  5. RETURN sequence length.
 
 ## B — Stack
 
