@@ -1,6 +1,6 @@
 # Problems
 
-A selection of LeetCode problems implemented in TypeScript using the [NeetCode Roadmap](https://neetcode.io/roadmap).
+A selection of problems implemented in TypeScript.
 
 ## A — Array
 
