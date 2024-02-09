@@ -61,6 +61,13 @@ A selection of LeetCode problems implemented in TypeScript using the [NeetCode R
 - **DS**: Stack
 - **Algorithm**:
   1. ITERATE brackets.
-  2. IF IS open THEN push.
-  3. ELSE IF pop IS NOT matching bracket THEN false.
-  4. ELSE return test IF stack IS empty.
+  2. IF open THEN push.
+  3. ELSE IF pop != matching bracket THEN RETURN false.
+  4. ELSE RETURN stack = empty.
+
+### 2. 🟢 🙂 [Min Stack](./src/stack/min-stack.ts)
+
+- **DS**: Stack x 2
+- **Algorithm**:
+  1. WHEN push IF value < MinStack top THEN push MinStack.
+  2. WHEN pop IF value = MinStack top THEN pop MinStack.
