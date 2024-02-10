@@ -57,7 +57,8 @@ const EMPTY_CELL = '.';
 const getSquareKey = (row: number, column: number) =>
   `${Math.floor(row / 3)}-${Math.floor(column / 3)}`;
 
-function isValidSudoku(board: string[][]): boolean {
+/** Time O(n^2) | Space O(n^2) */
+function isSodukoValid(board: string[][]): boolean {
   const columnValues: Record<number, Set<string>> = {};
   const rowValues: Record<number, Set<string>> = {};
   const squareValues: Record<string, Set<string>> = {};
@@ -107,9 +108,9 @@ function isValidSudoku(board: string[][]): boolean {
 
 if (import.meta.vitest) {
   const { it, expect } = import.meta.vitest;
-  it('Default', () => {
+  it('Valid Soduko', () => {
     EXAMPLES.forEach((example) => {
-      expect(isValidSudoku(example.input)).toEqual(example.output);
+      expect(isSodukoValid(example.input)).toEqual(example.output);
     });
   });
 }

@@ -35,26 +35,8 @@ const EXAMPLES = [
   },
 ];
 
-/**
- * Sorted
- * Time O(n log n) | Space O(n)
- */
-function sortAndCompareSolution({ s, t }: { s: string; t: string }) {
-  if (s.length !== t.length) {
-    return false;
-  }
-
-  const sSorted = s.split('').sort().join('');
-  const tSorted = t.split('').sort().join('');
-
-  return sSorted === tSorted;
-}
-
-/**
- * Compare
- * Time O(n)
- */
-function countFrequencySolution({ s, t }: { s: string; t: string }) {
+/** Time O(n) | Space O(n) */
+function isAnagramValid({ s, t }: { s: string; t: string }) {
   if (s.length !== t.length) {
     return false;
   }
@@ -79,14 +61,9 @@ function countFrequencySolution({ s, t }: { s: string; t: string }) {
 
 if (import.meta.vitest) {
   const { it, expect } = import.meta.vitest;
-  it('Sort and Compare', () => {
+  it('Valid Anagram', () => {
     EXAMPLES.forEach((example) => {
-      expect(sortAndCompareSolution(example.input)).toEqual(example.output);
-    });
-  });
-  it('Count Frequency', () => {
-    EXAMPLES.forEach((example) => {
-      expect(countFrequencySolution(example.input)).toEqual(example.output);
+      expect(isAnagramValid(example.input)).toEqual(example.output);
     });
   });
 }

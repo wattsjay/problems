@@ -40,11 +40,14 @@ const EXAMPLES = [
   },
 ];
 
-/**
- * Hash Set
- * Time O(n) | Space O(n)
- */
-function twoSumHashMap({ nums, target }: { nums: number[]; target: number }) {
+/** Time O(n) | Space O(n) */
+function getTwoSumIndices({
+  nums,
+  target,
+}: {
+  nums: number[];
+  target: number;
+}) {
   const hashMap = new Map();
   // T O(n)
   for (let i = 0; i < nums.length; i++) {
@@ -61,9 +64,9 @@ function twoSumHashMap({ nums, target }: { nums: number[]; target: number }) {
 
 if (import.meta.vitest) {
   const { it, expect } = import.meta.vitest;
-  it('Hash Set', () => {
+  it('Two Sum', () => {
     EXAMPLES.forEach((example) => {
-      expect(twoSumHashMap(example.input)).toEqual(example.output);
+      expect(getTwoSumIndices(example.input)).toEqual(example.output);
     });
   });
 }

@@ -27,11 +27,8 @@ const EXAMPLES = [
   },
 ];
 
-/**
- * Sorted Map
- * Time O(n log n) | Space O(n)
- */
-function groupAnagramsSortedMap(words: string[]) {
+/** Time O(n log n) | Space O(n) */
+function groupAnagrams(words: string[]) {
   // S O(n)
   const map = new Map<string, string[]>();
 
@@ -53,7 +50,7 @@ if (import.meta.vitest) {
   it('Sorted Map', () => {
     EXAMPLES.forEach((example) => {
       expect(
-        groupAnagramsSortedMap(example.input)
+        groupAnagrams(example.input)
           .map((group) => group.sort())
           .sort(),
       ).toEqual(example.output.map((group) => group.sort()).sort());

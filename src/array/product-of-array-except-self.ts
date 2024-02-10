@@ -29,27 +29,8 @@ const EXAMPLES = [
   },
 ];
 
-/**
- * Brute Force
- * Time O(n^2) | Space O(n)
- */
-function productOfArrayExceptSelfBruteForce(nums: number[]) {
-  const result = [];
-
-  for (let i = 0; i < nums.length; i++) {
-    const prefix = nums.slice(0, i);
-    const postfix = nums.slice(i + 1);
-    result.push([...prefix, ...postfix].reduce((prev, curr) => prev * curr));
-  }
-
-  return result;
-}
-
-/**
- * PrefixPostfix
- * Time O(n) | Space O(1)
- */
-function productExceptSelfPrefixPostfix(nums: number[]): number[] {
+/** Time O(n) | Space O(1) */
+function getProductOfArrayExceptSelf(nums: number[]): number[] {
   const result = new Array(nums.length).fill(1);
 
   let prefix = 1;
@@ -73,17 +54,10 @@ function removeNegativeZeros(nums: number[]): number[] {
 
 if (import.meta.vitest) {
   const { it, expect } = import.meta.vitest;
-  it('Brute Force', () => {
+  it('Product of Array Except Self', () => {
     EXAMPLES.forEach((example) => {
       expect(
-        removeNegativeZeros(productOfArrayExceptSelfBruteForce(example.input)),
-      ).toEqual(example.output);
-    });
-  });
-  it('Prefix Postfix', () => {
-    EXAMPLES.forEach((example) => {
-      expect(
-        removeNegativeZeros(productExceptSelfPrefixPostfix(example.input)),
+        removeNegativeZeros(getProductOfArrayExceptSelf(example.input)),
       ).toEqual(example.output);
     });
   });

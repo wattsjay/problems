@@ -31,17 +31,8 @@ const EXAMPLES = [
   },
 ];
 
-/**
- * Sorted Map
- * Time O(n log n) | Space O(n)
- */
-function topKFrequentElementsSortedMap({
-  nums,
-  k,
-}: {
-  nums: number[];
-  k: number;
-}) {
+/** Time O(n log n) | Space O(n) */
+function getTopKFrequentElements({ nums, k }: { nums: number[]; k: number }) {
   const map = new Map<number, number>();
   nums.forEach((num) => {
     map.set(num, (map.get(num) || 0) + 1);
@@ -52,11 +43,9 @@ function topKFrequentElementsSortedMap({
 
 if (import.meta.vitest) {
   const { it, expect } = import.meta.vitest;
-  it('Sorted Map', () => {
+  it('Top K Frequent Elements', () => {
     EXAMPLES.forEach((example) => {
-      expect(topKFrequentElementsSortedMap(example.input)).toEqual(
-        example.output,
-      );
+      expect(getTopKFrequentElements(example.input)).toEqual(example.output);
     });
   });
 }

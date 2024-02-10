@@ -49,10 +49,7 @@ const CLOSED_PAIRS = new Map([
   [']', '['],
 ]);
 
-/**
- * Stack
- * Time O(n) | Space O(n)
- */
+/** Time O(n) | Space O(n) */
 function isBracketsValid(brackets: string): boolean {
   const stack: string[] = [];
 

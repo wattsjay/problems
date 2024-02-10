@@ -26,32 +26,8 @@ const EXAMPLES = [
   },
 ];
 
-/**
- * Hash Set
- * Time O(n) | Space O(n)
- */
-function containsDuplicateHashSetSmallInputSize(nums: number[]) {
-  return new Set(nums).size !== nums.length;
-}
-
-/**
- * Hash Set
- * Time O(n) | Space O(n)
- */
-function containsDuplicateHashSetLargeInputSize(nums: number[]) {
-  let set = new Set();
-  for (let x of nums) {
-    if (set.has(x)) return true;
-    set.add(x);
-  }
-  return false;
-}
-
-/**
- * Heap Sort
- * Time O(n * log(n)) | Space O(1)
- */
-function containsDuplicateHeapSort(nums: number[]) {
+/** Time O(n * log(n)) | Space O(1) */
+function isContainDuplicate(nums: number[]) {
   const sortedNums = nums.sort((a, b) => a - b);
 
   for (
@@ -70,16 +46,9 @@ function containsDuplicateHeapSort(nums: number[]) {
 
 if (import.meta.vitest) {
   const { it, expect } = import.meta.vitest;
-  it('Hash Set', () => {
+  it('Contains Duplicate', () => {
     EXAMPLES.forEach((example) => {
-      expect(containsDuplicateHashSetSmallInputSize(example.input)).toEqual(
-        example.output,
-      );
-    });
-  });
-  it('Heap Sort', () => {
-    EXAMPLES.forEach((example) => {
-      expect(containsDuplicateHeapSort(example.input)).toEqual(example.output);
+      expect(isContainDuplicate(example.input)).toEqual(example.output);
     });
   });
 }

@@ -34,10 +34,7 @@ const EXAMPLES = [
   },
 ];
 
-/**
- * Min Stack
- * Time O(n) | Space O(n)
- */
+/** Time O(n) | Space O(n) */
 class MinStack {
   values: number[] = [];
   minimums: number[] = [];

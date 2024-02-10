@@ -21,11 +21,8 @@ const EXAMPLES = [
   },
 ];
 
-/**
- * Set
- * Time O(n) | Space O(n)
- */
-function longestConsecutiveSequence(numbers: number[]): number {
+/** Time O(n) | Space O(n) */
+function getLongestConsecutiveSequence(numbers: number[]): number {
   // 1. Get unique numbers.
   const set = new Set(numbers);
   let max = 0;
@@ -56,7 +53,9 @@ if (import.meta.vitest) {
   const { it, expect } = import.meta.vitest;
   it('Set', () => {
     EXAMPLES.forEach((example) => {
-      expect(longestConsecutiveSequence(example.input)).toEqual(example.output);
+      expect(getLongestConsecutiveSequence(example.input)).toEqual(
+        example.output,
+      );
     });
   });
 }

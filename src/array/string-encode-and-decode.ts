@@ -63,7 +63,7 @@ function encodeAndDecodeString(strings: string[]): string[] {
 
 if (import.meta.vitest) {
   const { it, expect } = import.meta.vitest;
-  it('Encode & Decode', () => {
+  it('String Encode & Decode', () => {
     EXAMPLES.forEach((example) => {
       expect(encodeAndDecodeString(example.input)).toEqual(example.output);
     });
