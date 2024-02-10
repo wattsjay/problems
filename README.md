@@ -71,3 +71,10 @@ A selection of problems implemented in TypeScript.
 - **Algorithm**:
   1. WHEN push IF value < MinStack top THEN push MinStack.
   2. WHEN pop IF value = MinStack top THEN pop MinStack.
+
+### 3. 🟢 🙂 [Evaluate Reverse Polish Notation](./src/stack/evaluate-reverse-polish-notation.ts)
+
+- **DS**: Stack
+- **Algorithm**:
+  1. IF operator THEN evaluate two integers on Stack.
+  2. ELSE push integer to Stack.
