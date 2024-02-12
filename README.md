@@ -78,3 +78,9 @@ A selection of problems implemented in TypeScript.
 - **Algorithm**:
   1. IF operator THEN evaluate two integers on Stack.
   2. ELSE push integer to Stack.
+
+### 4. 🟢 🙂 [Generate Parentheses](./src/stack/generate-parentheses.ts)
+
+- **Heuristics**: Backtracking, Recursion
+- **DS**: Stack
+- **Algorithm**: Call generator function recursively.
