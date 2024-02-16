@@ -84,3 +84,9 @@ A selection of problems implemented in TypeScript.
 - **Heuristics**: Backtracking, Recursion
 - **DS**: Stack
 - **Algorithm**: Call generator function recursively.
+
+### 5. 🟢 🙁 [Daily Temperatures](./src/stack/daily-temperatures.ts)
+
+- **Heuristics**: Greedy
+- **DS**: Stack
+- **Algorithm**: ?
