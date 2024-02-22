@@ -65,28 +65,39 @@ A selection of problems implemented in TypeScript.
   3. ELSE IF pop != matching bracket THEN RETURN false.
   4. ELSE RETURN stack = empty.
 
-### 2. 🟢 🙂 [Min Stack](./src/stack/min-stack.ts)
+### 2. 🟠 🙂 [Min Stack](./src/stack/min-stack.ts)
 
 - **DS**: Stack x 2
 - **Algorithm**:
   1. WHEN push IF value < MinStack top THEN push MinStack.
   2. WHEN pop IF value = MinStack top THEN pop MinStack.
 
-### 3. 🟢 🙂 [Evaluate Reverse Polish Notation](./src/stack/evaluate-reverse-polish-notation.ts)
+### 3. 🟠 🙂 [Evaluate Reverse Polish Notation](./src/stack/evaluate-reverse-polish-notation.ts)
 
 - **DS**: Stack
 - **Algorithm**:
   1. IF operator THEN evaluate two integers on Stack.
   2. ELSE push integer to Stack.
 
-### 4. 🟢 🙂 [Generate Parentheses](./src/stack/generate-parentheses.ts)
+### 4. 🟠 🙂 [Generate Parentheses](./src/stack/generate-parentheses.ts)
 
 - **Heuristics**: Backtracking, Recursion
 - **DS**: Stack
 - **Algorithm**: Call generator function recursively.
 
-### 5. 🟢 🙁 [Daily Temperatures](./src/stack/daily-temperatures.ts)
+### 5. 🟠 🙁 [Daily Temperatures](./src/stack/daily-temperatures.ts)
 
 - **Heuristics**: Greedy
 - **DS**: Stack
 - **Algorithm**: ?
+
+### 6. 🟠 🙂 [Car Fleet](./src/stack/car-fleet.ts)
+
+- **Heuristics**: Greedy
+- **DS**: Stack
+- **Algorithm**:
+  1. Zip distance and speed.
+  2. Sort descending distance.
+  3. ITERATE zipped cars.
+  4. Calculate ETA THEN push to Stack.
+  5. IF car ETA < car ahead THEN pop and merge car from Stack.
