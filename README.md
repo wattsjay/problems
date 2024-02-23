@@ -101,3 +101,9 @@ A selection of problems implemented in TypeScript.
   3. ITERATE zipped cars.
   4. Calculate ETA THEN push to Stack.
   5. IF car ETA < car ahead THEN pop and merge car from Stack.
+
+## C — Two Pointers
+
+### 1. 🟢 🙂 [Valid Palindrome](./src/two-pointers/valid-palindrome.ts)
+
+- **Algorithm**: Walk two pointers in opposite directions.
