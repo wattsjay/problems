@@ -107,3 +107,10 @@ A selection of problems implemented in TypeScript.
 ### 1. 🟢 🙂 [Valid Palindrome](./src/two-pointers/valid-palindrome.ts)
 
 - **Algorithm**: Walk two pointers in opposite directions.
+
+### 2. 🟢 🙂 [Two Sum II - Input Array Is Sorted](./src/two-pointers/two-sum-ii.ts)
+
+- **Algorithm**:
+  1. Walk two pointers in possite directions
+  2. IF sum > target THEN decrease endPointer
+  3. IF sum < target THEN increase startPointer
